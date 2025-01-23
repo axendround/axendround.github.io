@@ -15,6 +15,13 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Light Mode Styles */
+body.light-mode {
+    background: #fff;
+    color: #333;
 }
 
 a {
@@ -81,4 +88,20 @@ a:hover {
     to {
         opacity: 1;
     }
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #ff007f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #e6006d;
 }
