@@ -3,107 +3,82 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
 body {
-    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background: #0d0d0d;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+a {
+    color: #ff007f;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.highlight {
+    color: #ffdd00;
+    font-weight: bold;
 }
 
 /* Navbar */
 .navbar {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-.navbar .logo {
-    display: inline-block;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.nav-links {
+.navbar ul {
+    display: flex;
     list-style: none;
-    float: right;
 }
 
-.nav-links li {
-    display: inline;
-    margin: 0 10px;
+.navbar li {
+    margin: 0 15px;
 }
 
-.nav-links a {
+.navbar a {
     color: #fff;
-    text-decoration: none;
+    font-size: 0.9em;
+    text-transform: uppercase;
 }
 
 /* Hero Section */
 .hero {
-    background: url('hero-bg.jpg') no-repeat center center/cover;
-    color: #fff;
-    height: 70vh;
-    display: flex;
-    align-items: center;
     text-align: center;
-    padding: 0 20px;
+    animation: fadeIn 2s ease-in-out;
 }
 
-.hero .btn {
-    background: #ff5a5f;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-/* Services Section */
-.services {
-    padding: 40px 0;
-    text-align: center;
-}
-
-.services h2 {
+.hero h1 {
+    font-size: 4em;
+    font-weight: bold;
     margin-bottom: 20px;
 }
 
-.service-list {
-    display: flex;
-    justify-content: space-between;
+.hero p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
-.service-item {
-    flex: 1;
-    padding: 10px;
-    margin: 10px;
-    background: #f4f4f4;
-    border-radius: 5px;
-}
-
-/* About Section */
-.about {
-    padding: 40px 0;
-    background: #ddd;
-    text-align: center;
-}
-
-/* Contact Section */
-.contact {
-    padding: 40px 0;
-    text-align: center;
-}
-
-/* Footer */
-.footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
