@@ -17,6 +17,14 @@ body.light-mode {
     font-weight: bold;
 }
 
+.toggle-buttons-container {
+    display: flex;
+    gap: 20px; /* Add space between buttons */
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Space above the toggle buttons */
+}
+
 /* Slide Toggle Container */
 .slide-toggle {
     display: flex;
