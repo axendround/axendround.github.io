@@ -17,64 +17,45 @@ body.light-mode {
     font-weight: bold;
 }
 
-/* Toggle Switch Styles */
-.toggle-switch {
-    margin: 20px 0;
+/* Slide Toggle Container */
+.slide-toggle {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 10px;
+    margin: 20px 0;
 }
 
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 30px;
-}
-
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: 0.4s;
-    border-radius: 15px;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 22px;
-    width: 22px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: 0.4s;
-    border-radius: 50%;
-}
-
-/* When checked */
-input:checked + .slider {
-    background-color: #4caf50;
-}
-
-input:checked + .slider:before {
-    transform: translateX(28px);
-}
-
-/* Toggle Labels */
 .toggle-label {
     font-size: 1em;
     font-weight: bold;
     color: inherit;
+}
+
+.slider {
+    position: relative;
+    width: 80px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 15px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.slider .knob {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background-color: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s ease;
+}
+
+.slider.active .knob {
+    transform: translateX(50px);
+}
+
+.slider.active {
+    background-color: #4caf50;
 }
