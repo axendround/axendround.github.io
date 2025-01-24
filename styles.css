@@ -1,108 +1,80 @@
 /* General Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: 'Arial', sans-serif;
     color: #fff;
     background: #0d0d0d;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     transition: background 0.3s, color 0.3s;
 }
 
-/* Light Mode Styles */
 body.light-mode {
     background: #fff;
     color: #333;
 }
 
-/* Links */
-a {
-    color: #ff007f;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
+/* Highlight Text */
 .highlight {
     color: #ffdd00;
     font-weight: bold;
 }
 
-/* Navbar */
-.navbar {
-    position: absolute;
-    top: 10px;
-    width: 100%;
+/* Toggle Switch Styles */
+.toggle-switch {
+    margin: 20px 0;
     display: flex;
+    align-items: center;
     justify-content: center;
+    gap: 10px;
 }
 
-.navbar ul {
-    display: flex;
-    list-style: none;
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
 }
 
-.navbar li {
-    margin: 0 15px;
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
-.navbar a {
-    color: #fff;
-    font-size: 0.9em;
-    text-transform: uppercase;
-}
-
-/* Hero Section */
-.hero {
-    text-align: center;
-    animation: fadeIn 2s ease-in-out;
-}
-
-.hero h1 {
-    font-size: 4em;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Buttons */
-button {
-    padding: 10px 20px;
-    margin: 10px;
+.slider {
+    position: absolute;
     cursor: pointer;
-    background-color: #ff007f;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 15px;
 }
 
-button:hover {
-    background-color: #e6006d;
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* When checked */
+input:checked + .slider {
+    background-color: #4caf50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(28px);
+}
+
+/* Toggle Labels */
+.toggle-label {
+    font-size: 1em;
+    font-weight: bold;
+    color: inherit;
 }

@@ -28,9 +28,23 @@
             I'm passionate about working with systems, particularly data storage. Currently focusing on <span class="highlight">System Administration</span>.<br>
         </p>
 
-        <!-- Buttons for switching theme and language -->
-        <button id="themeToggle">Toggle Theme</button>
-        <button id="languageToggle">Switch to Vietnamese</button>
+        <!-- Theme Toggle -->
+        <div class="toggle-switch">
+            <label class="switch">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider"></span>
+            </label>
+            <span class="toggle-label" id="themeLabel">🌙 Dark</span>
+        </div>
+
+        <!-- Language Toggle -->
+        <div class="toggle-switch">
+            <label class="switch">
+                <input type="checkbox" id="languageToggle">
+                <span class="slider"></span>
+            </label>
+            <span class="toggle-label" id="languageLabel">🇺🇸 English</span>
+        </div>
     </main>
 
     <script src="scripts.js"></script>
