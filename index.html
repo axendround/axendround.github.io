@@ -3,20 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirecting...</title>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const userLang = navigator.language || navigator.userLanguage;
-      if (userLang.startsWith('vi')) {
-        window.location.href = "/vi/";
-      } else {
-        window.location.href = "/en/";
-      }
-    });
-  </script>
+  <title>Axendround</title>
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/particle.css">
 </head>
 <body>
-  <p>Redirecting...</p>
+  <header id="header">
+    <h1>Welcome to Axend's website</h1>
+    <button id="homeButton">Let’s Go</button>
+  </header>
+  <div id="background-layer"></div>
+
+  <script src="scripts/hide-header.js"></script>
+  <script src="scripts/particle.js"></script>
 </body>
 </html>
-
