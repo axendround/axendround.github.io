@@ -1,0 +1,109 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Prevent scrollbars */
+  background: black; /* Main background color */
+  color: white;
+}
+
+#background-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Place it behind all other content */
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 1s ease-out;
+}
+
+header h1 {
+  font-size: 4rem;
+  text-shadow:  0 0 10px rgba(255, 255, 255, 0.8), 
+                0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  background: white;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+button:hover {
+  background: black;
+  color: white;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 1);
+}
+
+#homePage {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+#homePage h2{
+  font-size: 3rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+#homePage p {
+  font-size: 1.5rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* languageSelector */
+#languageSelect {
+  margin-top: 20px;
+  position: fixed;  /* Giữ nó cố định trên màn hình */
+  top: 20px;        /* Khoảng cách từ trên trang */
+  left: 20px;       /* Khoảng cách từ bên trái */
+  z-index: 1000;    /* Đảm bảo nó nằm trên các phần tử khác */
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 25px;  /* Đặt bo tròn góc giống button */
+  border: 1px solid white;  /* Đặt viền trắng giống button */
+  background: transparent;
+  color: white;
+  padding: 10px 20px;  /* Đặt padding cho dropdown giống button */
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Đặt shadow giống button */
+  transition: all 0.3s ease;
+}
+
+/* Thay đổi màu sắc chữ trong các option của dropdown */
+#languageSelect option {
+  color: black;  /* Đặt màu chữ cho các lựa chọn thành màu đen */
+  background: white;  /* Màu nền của các lựa chọn */
+  font-weight: bold;
+}
+
+/* Thêm hiệu ứng hover cho dropdown */
+#languageSelect:hover {
+  background: black;
+  color: white;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 1);
+}
+
