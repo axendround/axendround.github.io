@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const defaultLanguage = userLanguage.startsWith("vi") ? "vi" : "en";
 
         // Chuyển hướng đến trang tương ứng
-        window.location.href = `/website/${defaultLanguage}/index.html`;
+        window.location.href = `/${defaultLanguage}/index.html`;
       }, 800); // Đợi 800ms để hoàn thành hiệu ứng ẩn header
     });
   }
